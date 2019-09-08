@@ -1,16 +1,17 @@
 # github_client_app
 
-A new Flutter project.
+学习flutter构建的一个完整项目，Github客户端示例，参照[此文](https://book.flutterchina.club/chapter15/intro.html).
 
-## Getting Started
+主要实现的功能：
+- 实现Github账号登录、退出登录功能
+- 登录后可以查看自己的项目主页
+- 支持换肤
+- 支持多语言
+- 登录状态可以持久化
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+主要涉及的技术点：
+- 网络请求；需要请求Github API
+- Json转Dart Model类
+- 全局状态管理；语言、主题、登录态等都需要全局共享
+- 持久化存储；保存登录信息，用户信息等
+- 支持国际化、Intl包的使用
