@@ -47,11 +47,12 @@ class Git {
     String basic = 'Basic ' + base64.encode(utf8.encode('$login:$pwd'));
     var r = await dio.get(
       "/users/$login",
-      options: _options.merge(headers: {
-        HttpHeaders.authorizationHeader: basic
-      }, extra: {
-        "noCache": true, //本接口禁用缓存
-      }),
+      options: _options.merge(
+        headers: {HttpHeaders.authorizationHeader: basic},
+        extra: {
+          "noCache": true, //本接口禁用缓存
+        },
+      ),
     );
     //登录成功后更新公共头（authorization），此后的所有请求都会带上用户身份信息
     dio.options.headers[HttpHeaders.authorizationHeader] = basic;
